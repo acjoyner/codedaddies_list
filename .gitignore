@@ -214,7 +214,7 @@ dmypy.json
 cython_debug/
 
 .DS_Store
-codedaddies_list/
+#codedaddies_list/
 exclude
 manage.py
 my_app/
