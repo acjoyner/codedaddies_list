@@ -22,7 +22,7 @@
     </div>
 </nav>
 
-<div class="container">
+    <div class="container">
     <h1 style="text-align: center">What do you want to search for on Codedaddies List?</h1>
     <div class="row">
         <div class="col s4">
@@ -46,12 +46,19 @@
             </div>
         </div>
 
+        <form action="{%  url 'new_search' %}" method="post">
+        {% csrf_token %}
+            <input type="text" name="search" placeholder="search">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">flash_on</i>
+            </button>
+        </form>
     </div>
     {#    DRY - Do not repeat yourself#}
     {% block content %}
     
     {% endblock %}
-
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </div>
